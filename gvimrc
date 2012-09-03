@@ -14,3 +14,9 @@ set guifont=Menlo:h14,DejaVu\ Sans\ Mono:h14,Bitstream\ Vera\ Sans\ Mono\ 14,Mon
 " Don't go crazy horizontal
 set fuoptions=maxvert
 
+set bg=dark
+if &background == "dark"
+	hi normal guibg=black
+	set transp=8
+endif
+

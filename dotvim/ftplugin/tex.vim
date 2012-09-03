@@ -35,7 +35,10 @@ let g:Tex_FormatDependency_pspdf = 'dvi,ps,pspdf'
 let g:Tex_FormatDependency_dvipdf = 'dvi,dvipdf'
 "let g:Tex_MultipleCompileFormats = 'dvi,pdf'
 " multiple compile seems kind of buggy
-let g:Tex_MultipleCompileFormats = ''
+" EVAN BOLLIG: NOTE: this is required to get synctex from Skim->MacVim to
+" allow rebuilding PDF with \ll. Otherwise the tex file must be opened indep.
+" of the Skim synctex click.
+let g:Tex_MultipleCompileFormats = 'pdf'
 
 " don't move the main window around after compiling
 let g:Tex_GotoError = 0
