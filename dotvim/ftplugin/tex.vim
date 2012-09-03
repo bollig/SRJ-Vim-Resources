@@ -68,7 +68,7 @@ let g:Tex_UseMakefile = 0
 let g:Tex_MainFileExpression = 'SRJMainFile(modifier)'
 
 function! SRJMainFile(fmod)
-	let s:Tex_Match = '\v^\s*\%\s+!TEX\s+root\s+\=\s+\zs(.*\.tex)\ze\s*$'
+	let s:Tex_Match = '\v^\s*\%\s*!TEX\s+root\s+\=\s+\zs(.*\.tex)\ze\s*$'
     let s:lnum = 1
     while s:lnum < 20
 		let s:basefile = matchstr( getline(s:lnum), s:Tex_Match)
