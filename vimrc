@@ -5,9 +5,10 @@
 " This must be first, because it changes other options as a side effect.
 set nocompatible
 
-set number
+"set number
 set sw=4 ts=4
 " set the syntax highlighting, colors
+"colorscheme ir_black
 set background=dark
 
 " set window size
@@ -110,6 +111,7 @@ function! StripTrailingWhitespace()
   normal `Z
 endfunction
 
+source ~/.vim/custom_mswin.vim
 " Only do this part when compiled with support for autocommands.
 if has("autocmd")
   augroup sourceAu

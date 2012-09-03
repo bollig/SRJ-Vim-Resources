@@ -1,4 +1,4 @@
-RYSNC_CMD=rsync -CrlptgoX -v --exclude='*.swp' \
+RYSNC_CMD=rsync -Crlptgo -v --exclude='*.swp' \
 		  --exclude='.DS_Store' --exclude='*.pyc' \
 		  --exclude='en.utf-8.add.spl'
 
