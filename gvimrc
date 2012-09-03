@@ -9,14 +9,17 @@ colorscheme seth
 "set selectmode=key
 
 " first font is mac only
-set guifont=Menlo:h14,DejaVu\ Sans\ Mono:h14,Bitstream\ Vera\ Sans\ Mono\ 14,Monospace\ 11
+"set guifont=Menlo:h14,DejaVu\ Sans\ Mono:h14,Bitstream\ Vera\ Sans\ Mono\ 14,Monospace\ 11
+set guifont=Monaco:h13
+
+set transparency=20
 
 " Don't go crazy horizontal
 set fuoptions=maxvert
 
-set bg=dark
-if &background == "dark"
-	hi normal guibg=black
-	set transp=8
-endif
+"set bg=dark
+"if &background == "dark"
+"	hi normal guibg=black
+"	set transp=15
+"endif
 
