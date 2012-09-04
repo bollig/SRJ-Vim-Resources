@@ -38,7 +38,7 @@ let g:Tex_FormatDependency_dvipdf = 'dvi,dvipdf'
 " EVAN BOLLIG: NOTE: this is required to get synctex from Skim->MacVim to
 " allow rebuilding PDF with \ll. Otherwise the tex file must be opened indep.
 " of the Skim synctex click.
-let g:Tex_MultipleCompileFormats = 'pdf'
+let g:Tex_MultipleCompileFormats = 'dvi,pdf'
 
 " don't move the main window around after compiling
 let g:Tex_GotoError = 0
