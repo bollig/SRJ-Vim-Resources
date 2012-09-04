@@ -12,7 +12,7 @@ colorscheme seth
 "set guifont=Menlo:h14,DejaVu\ Sans\ Mono:h14,Bitstream\ Vera\ Sans\ Mono\ 14,Monospace\ 11
 set guifont=Monaco:h13
 
-set transparency=20
+set transparency=17
 
 " Don't go crazy horizontal
 set fuoptions=maxvert
@@ -28,4 +28,22 @@ set fuoptions=maxvert
 " " 'plaintex' instead of 'tex', which results in vim-latex not being loaded.
 " " The following changes the default filetype back to 'tex':
 let g:tex_flavor='latex'
+
+augroup CursorLine
+	au!
+	au VimEnter,WinEnter,BufWinEnter * setlocal cursorline
+	au WinLeave * setlocal nocursorline
+augroup END
+
+" Show a cursor line but disable it when we enter insert mode
+" so we can see all syntax hilighting when we have our insert cursor
+"set cursorline
+autocmd InsertEnter * highlight CursorLine guifg=NONE guibg=#111111 ctermfg=NONE ctermbg=NONE
+autocmd InsertLeave * highlight CursorLine guifg=NONE guibg=#330033 ctermfg=NONE ctermbg=darkyellow
+
+:highlight CursorLine   cterm=NONE ctermbg=NONE ctermfg=NONE guibg=#330033 guifg=NONE
+:highlight CursorColumn cterm=NONE ctermbg=NONE ctermfg=NONE guibg=#330000 guifg=NONE
+:highlight Cursor	     cterm=NONE ctermbg=yellow  ctermfg=black guibg=yellow guifg=black
+":nnoremap <Leader>c :set cursorline! cursorcolumn!<CR>
+
 
