@@ -42,6 +42,7 @@ filetype indent on
 set grepprg=grep\ -nH\ $*
 let g:tex_flavor='latex'
 let g:tex_isk='48-57,a-z,A-Z,192-255,:'
+"map <F2> <F9>
 "**************************************
 
 set foldlevel=1
@@ -112,6 +113,9 @@ function! StripTrailingWhitespace()
 endfunction
 
 source ~/.vim/custom_mswin.vim
+" FIX <F9> on MBP 
+autocmd FileType tex imap <buffer> <M-TAB> <Plug>Tex_Completion
+
 " Only do this part when compiled with support for autocommands.
 if has("autocmd")
   augroup sourceAu

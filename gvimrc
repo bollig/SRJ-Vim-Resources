@@ -46,4 +46,3 @@ autocmd InsertLeave * highlight CursorLine guifg=NONE guibg=#330033 ctermfg=NONE
 :highlight Cursor	     cterm=NONE ctermbg=yellow  ctermfg=black guibg=yellow guifg=black
 ":nnoremap <Leader>c :set cursorline! cursorcolumn!<CR>
 
-
