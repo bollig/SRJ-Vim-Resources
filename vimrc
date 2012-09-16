@@ -12,8 +12,8 @@ set sw=4 ts=4
 set background=dark
 
 " set window size
-set lines=55
-set columns=85 "so that, with 1000-9999 line files, it's 80 chars wide
+"set lines=55
+"set columns=85 "so that, with 1000-9999 line files, it's 80 chars wide
 
 set scrolloff=2
 set wildmode=list:longest
