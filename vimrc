@@ -45,6 +45,26 @@ let g:tex_isk='48-57,a-z,A-Z,192-255,:'
 "map <F2> <F9>
 "**************************************
 
+augroup CursorLine
+	au!
+	au VimEnter,WinEnter,BufWinEnter * setlocal cursorline
+	au WinLeave * setlocal nocursorline
+augroup END
+
+" Show a cursor line but disable it when we enter insert mode
+" so we can see all syntax hilighting when we have our insert cursor
+"set cursorline
+autocmd InsertEnter * highlight CursorLine guifg=NONE guibg=#111111 ctermfg=NONE ctermbg=NONE
+autocmd InsertLeave * highlight CursorLine guifg=NONE guibg=#330033 ctermfg=NONE ctermbg=darkred
+
+:highlight CursorLine   cterm=NONE ctermbg=darkred ctermfg=NONE guibg=#330033 guifg=NONE
+:highlight Search cterm=NONE ctermbg=darkyellow ctermfg=black
+:highlight CursorColumn cterm=NONE ctermbg=NONE ctermfg=NONE guibg=#330000 guifg=NONE
+:highlight Cursor	     cterm=NONE ctermbg=NONE ctermfg=black guibg=yellow guifg=black
+":nnoremap <Leader>c :set cursorline! cursorcolumn!<CR>
+
+
+
 set foldlevel=1
 
 "use shift-option-command type stuff on the mac
