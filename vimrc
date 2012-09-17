@@ -58,7 +58,7 @@ autocmd InsertEnter * highlight CursorLine guifg=NONE guibg=#111111 ctermfg=NONE
 autocmd InsertLeave * highlight CursorLine guifg=NONE guibg=#330033 ctermfg=NONE ctermbg=darkred
 
 :highlight CursorLine   cterm=NONE ctermbg=darkred ctermfg=NONE guibg=#330033 guifg=NONE
-:highlight Search cterm=NONE ctermbg=darkyellow ctermfg=black
+:highlight Search term=underline cterm=underline ctermbg=none ctermfg=darkred guibg=darkyellow guifg=Black
 :highlight CursorColumn cterm=NONE ctermbg=NONE ctermfg=NONE guibg=#330000 guifg=NONE
 :highlight Cursor	     cterm=NONE ctermbg=NONE ctermfg=black guibg=yellow guifg=black
 ":nnoremap <Leader>c :set cursorline! cursorcolumn!<CR>
