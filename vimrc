@@ -3,13 +3,42 @@
 
 " Use Vim settings, rather then Vi settings (much better!).
 " This must be first, because it changes other options as a side effect.
-set nocompatible
-
-"set number
+""set nocompatible
+"""
+""set number
+set t_Co=256
 set sw=4 ts=4
 " set the syntax highlighting, colors
 "colorscheme ir_black
 set background=dark
+
+augroup CursorLine
+	au!
+	au VimEnter,WinEnter,BufWinEnter * setlocal cursorline
+	au WinLeave * setlocal nocursorline
+augroup END
+
+
+augroup CursorLine
+	au!
+	au VimEnter,WinEnter,BufWinEnter * setlocal cursorline
+	au WinLeave * setlocal nocursorline
+augroup END
+
+" Show a cursor line but disable it when we enter insert mode
+" so we can see all syntax hilighting when we have our insert cursor
+"set cursorline
+autocmd InsertEnter * highlight CursorLine guifg=NONE guibg=#111111 ctermfg=NONE ctermbg=NONE
+autocmd InsertLeave * highlight CursorLine guifg=NONE guibg=#330033 ctermfg=NONE ctermbg=darkred
+
+:highlight CursorLine   cterm=NONE ctermbg=darkred ctermfg=NONE guibg=#330033 guifg=NONE
+:highlight CursorColumn cterm=NONE ctermbg=darkred ctermfg=NONE guibg=#330000 guifg=NONE
+:highlight Cursor	     cterm=NONE ctermbg=yellow  ctermfg=black guibg=yellow guifg=black
+:highlight Visual       term=reverse cterm=NONE ctermfg=black  ctermbg=lightgreen gui=NONE guifg=black       guibg=lightgreen
+
+" Show a cursor line but disable it when we enter insert mode
+" so we can see all syntax hilighting when we have our insert cursor
+"set cursorline
 
 " set window size
 "set lines=55
@@ -44,26 +73,6 @@ let g:tex_flavor='latex'
 let g:tex_isk='48-57,a-z,A-Z,192-255,:'
 "map <F2> <F9>
 "**************************************
-
-augroup CursorLine
-	au!
-	au VimEnter,WinEnter,BufWinEnter * setlocal cursorline
-	au WinLeave * setlocal nocursorline
-augroup END
-
-" Show a cursor line but disable it when we enter insert mode
-" so we can see all syntax hilighting when we have our insert cursor
-"set cursorline
-autocmd InsertEnter * highlight CursorLine guifg=NONE guibg=#111111 ctermfg=NONE ctermbg=NONE
-autocmd InsertLeave * highlight CursorLine guifg=NONE guibg=#330033 ctermfg=NONE ctermbg=darkred
-
-:highlight CursorLine   cterm=NONE ctermbg=darkred ctermfg=NONE guibg=#330033 guifg=NONE
-:highlight Search term=underline cterm=underline ctermbg=none ctermfg=darkred guibg=darkyellow guifg=Black
-:highlight CursorColumn cterm=NONE ctermbg=NONE ctermfg=NONE guibg=#330000 guifg=NONE
-:highlight Cursor	     cterm=NONE ctermbg=NONE ctermfg=black guibg=yellow guifg=black
-":nnoremap <Leader>c :set cursorline! cursorcolumn!<CR>
-
-
 
 set foldlevel=1
 

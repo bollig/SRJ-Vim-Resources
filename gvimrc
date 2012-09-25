@@ -10,9 +10,9 @@ colorscheme seth
 
 " first font is mac only
 "set guifont=Menlo:h14,DejaVu\ Sans\ Mono:h14,Bitstream\ Vera\ Sans\ Mono\ 14,Monospace\ 11
-set guifont=Monaco:h13
+"set guifont=Monaco:h13
 
-set transparency=17
+"set transparency=17
 
 " Don't go crazy horizontal
 set fuoptions=maxvert
@@ -43,6 +43,8 @@ autocmd InsertLeave * highlight CursorLine guifg=NONE guibg=#330033 ctermfg=NONE
 
 :highlight CursorLine   cterm=NONE ctermbg=NONE ctermfg=NONE guibg=#330033 guifg=NONE
 :highlight CursorColumn cterm=NONE ctermbg=NONE ctermfg=NONE guibg=#330000 guifg=NONE
-:highlight Cursor	     cterm=NONE ctermbg=yellow  ctermfg=black guibg=yellow guifg=black
+:highlight Cursor	     cterm=NONE ctermbg=green  ctermfg=black guibg=green guifg=black
+:highlight Visual       term=reverse cterm=NONE ctermfg=black  ctermbg=lightyellow gui=NONE guifg=black       guibg=lightgreen
+
 ":nnoremap <Leader>c :set cursorline! cursorcolumn!<CR>
 
