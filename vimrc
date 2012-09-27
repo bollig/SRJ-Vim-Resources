@@ -10,6 +10,7 @@ set t_Co=256
 set sw=4 ts=4
 " set the syntax highlighting, colors
 "colorscheme ir_black
+"colorscheme default
 set background=dark
 
 augroup CursorLine
@@ -34,6 +35,7 @@ autocmd InsertLeave * highlight CursorLine guifg=NONE guibg=#330033 ctermfg=NONE
 :highlight CursorLine   cterm=NONE ctermbg=darkred ctermfg=NONE guibg=#330033 guifg=NONE
 :highlight CursorColumn cterm=NONE ctermbg=darkred ctermfg=NONE guibg=#330000 guifg=NONE
 :highlight Cursor	     cterm=NONE ctermbg=yellow  ctermfg=black guibg=yellow guifg=black
+
 :highlight Visual       term=reverse cterm=NONE ctermfg=black  ctermbg=lightgreen gui=NONE guifg=black       guibg=lightgreen
 
 " Show a cursor line but disable it when we enter insert mode
