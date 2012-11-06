@@ -48,3 +48,10 @@ autocmd InsertLeave * highlight CursorLine guifg=NONE guibg=#330033 ctermfg=NONE
 
 ":nnoremap <Leader>c :set cursorline! cursorcolumn!<CR>
 
+"folding settings
+set foldmethod=indent   "fold based on indent
+set foldnestmax=10      "deepest fold is 10 levels
+set nofoldenable        "dont fold by default
+set foldlevel=1         "this is just what i use
+
+set clipboard=unnamed
