@@ -143,7 +143,7 @@ function! StripTrailingWhitespace()
   normal `Z
 endfunction
 
-source ~/.vim/custom_mswin.vim
+"source ~/.vim/custom_mswin.vim
 " FIX <F9> on MBP 
 autocmd FileType tex imap <buffer> <M-TAB> <Plug>Tex_Completion
 
@@ -178,6 +178,10 @@ if has("autocmd")
     "for matlab files
     autocmd BufRead,BufNewFile *.m setlocal sw=4 ts=4
     autocmd BufRead,BufNewFile *.m setlocal expandtab
+
+		" Perl files
+    autocmd BufRead,BufNewFile *.pl setlocal sw=2 ts=2 
+    autocmd BufRead,BufNewFile *.pl setlocal expandtab
 
     "i files are SWIGs
     autocmd BufRead,BufNewFile *.i,*.swg set filetype=cpp
