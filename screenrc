@@ -10,6 +10,8 @@ vbell off
 
 screen -t home 0
 
+autodetach on
+altscreen on
 
 #term "screen-256color"
 #termcapinfo xterm*|rxvt*|kterm*|Eterm* 'hs:ts=\E]0;:fs=\007:ds=\E]0;\007'
@@ -19,9 +21,5 @@ screen -t home 0
 attrcolor b ".I" 
 # tell screen how to set colors. AB = background, AF=foreground 
 termcapinfo xterm 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm' 
-termcapinfo xterm*|rxvt*|kterm*|Eterm* ti@:te@
 # erase background with current bg color 
 defbce "on" 
-
-autodetach on
-altscreen on

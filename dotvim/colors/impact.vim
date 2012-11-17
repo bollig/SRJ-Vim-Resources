@@ -33,7 +33,7 @@ if exists("g:impact_transbg")
         hi WarningMsg   ctermfg=Yellow    ctermbg=none
         hi VertSplit    ctermfg=White     ctermbg=none
         hi Directory    ctermfg=Cyan      ctermbg=DarkBlue
-        hi Visual       ctermfg=DarkGray ctermbg=LightGray  cterm=underline term=none
+        hi Visual       ctermfg=White     ctermbg=DarkGray cterm=underline term=none
         hi Title        ctermfg=White     ctermbg=DarkBlue
 
         hi StatusLine   term=bold cterm=bold,underline ctermfg=White ctermbg=Black
@@ -52,24 +52,15 @@ else
         hi Special      ctermfg=Blue      ctermbg=Black
         hi PreProc      ctermfg=LightGray ctermbg=Black cterm=bold term=bold
         hi Scrollbar    ctermfg=Blue      ctermbg=Black
-        hi Cursor       ctermfg=White     ctermbg=Black
+        hi Cursor       ctermfg=white     ctermbg=Black
         hi ErrorMsg     ctermfg=Red       ctermbg=Black cterm=bold term=bold
         hi WarningMsg   ctermfg=Yellow    ctermbg=Black
         hi VertSplit    ctermfg=White     ctermbg=Black
         hi Directory    ctermfg=Cyan      ctermbg=DarkBlue
-        hi Visual       ctermfg=DarkGray ctermbg=LightGray  cterm=underline term=none
+        hi Visual       ctermfg=White     ctermbg=DarkGray cterm=underline term=none
         hi Title        ctermfg=White     ctermbg=DarkBlue
 
         hi StatusLine   term=bold cterm=bold,underline ctermfg=White ctermbg=Black
         hi StatusLineNC term=bold cterm=bold,underline ctermfg=Gray  ctermbg=Black
         hi LineNr       term=bold cterm=bold ctermfg=White ctermbg=DarkGray
-endif
-
-if version >= 700 " Vim 7.x specific colors
-"    hi CursorLine     guifg=NONE        guibg=#121212     gui=NONE      ctermfg=NONE        ctermbg=Magenta        cterm=BOLD
-"   hi CursorColumn   guifg=NONE        guibg=#121212     gui=NONE      ctermfg=NONE        ctermbg=Magenta     cterm=BOLD
-"    hi MatchParen     guifg=#f6f3e8     guibg=#857b6f     gui=BOLD      ctermfg=white       ctermbg=darkgray    cterm=NONE
-"    hi Pmenu          guifg=#f6f3e8     guibg=#444444     gui=NONE      ctermfg=NONE        ctermbg=NONE        cterm=NONE
-"    hi PmenuSel       guifg=#000000     guibg=#cae682     gui=NONE      ctermfg=NONE        ctermbg=NONE        cterm=NONE
-    hi Search         guifg=NONE        guibg=NONE        gui=underline ctermfg=Red        ctermbg=NONE        cterm=underline 
 endif

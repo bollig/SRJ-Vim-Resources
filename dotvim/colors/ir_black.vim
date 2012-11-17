@@ -81,8 +81,8 @@ hi StatusLineNC     guifg=black       guibg=#202020     gui=NONE      ctermfg=bl
 hi Folded           guifg=#DAA520     guibg=NONE     gui=NONE      ctermfg=brown        ctermbg=NONE        cterm=NONE
 "hi Folded           guifg=#a0a8b0     guibg=#384048     gui=NONE      ctermfg=brown        ctermbg=NONE        cterm=NONE
 hi Title            guifg=#f6f3e8     guibg=NONE        gui=bold      ctermfg=NONE        ctermbg=NONE        cterm=NONE
-"hi Visual           guifg=NONE        guibg=#262D51     gui=NONE      ctermfg=NONE        ctermbg=darkgray    cterm=NONE
-hi Visual       ctermfg=DarkGray ctermbg=LightGray  cterm=underline term=none
+hi Visual           guifg=NONE        guibg=#262D51     gui=NONE      ctermfg=NONE        ctermbg=darkgray    cterm=NONE
+
 hi SpecialKey       guifg=#808080     guibg=#343434     gui=NONE      ctermfg=NONE        ctermbg=NONE        cterm=NONE
 
 hi WildMenu         guifg=green       guibg=yellow      gui=NONE      ctermfg=black       ctermbg=yellow      cterm=NONE
@@ -102,8 +102,7 @@ if version >= 700 " Vim 7.x specific colors
   hi MatchParen     guifg=#f6f3e8     guibg=#857b6f     gui=BOLD      ctermfg=white       ctermbg=darkgray    cterm=NONE
   hi Pmenu          guifg=#f6f3e8     guibg=#444444     gui=NONE      ctermfg=NONE        ctermbg=NONE        cterm=NONE
   hi PmenuSel       guifg=#000000     guibg=#cae682     gui=NONE      ctermfg=NONE        ctermbg=NONE        cterm=NONE
-  hi Search         guifg=NONE        guibg=NONE        gui=underline ctermfg=Red        ctermbg=NONE        cterm=underline 
-  " underline
+  hi Search         guifg=NONE        guibg=NONE        gui=underline ctermfg=NONE        ctermbg=NONE        cterm=underline
 endif
 
 " Syntax highlighting

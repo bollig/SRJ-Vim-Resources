@@ -3,48 +3,21 @@
 
 " Use Vim settings, rather then Vi settings (much better!).
 " This must be first, because it changes other options as a side effect.
-""set nocompatible
-"""
-""set number
-set t_Co=256
+set nocompatible
+
+"set number
 set sw=4 ts=4
 " set the syntax highlighting, colors
 "colorscheme ir_black
-"colorscheme default
 set background=dark
 
-augroup CursorLine
-	au!
-	au VimEnter,WinEnter,BufWinEnter * setlocal cursorline
-	au WinLeave * setlocal nocursorline
-augroup END
-
-
-augroup CursorLine
-	au!
-	au VimEnter,WinEnter,BufWinEnter * setlocal cursorline
-	au WinLeave * setlocal nocursorline
-augroup END
-
-" Show a cursor line but disable it when we enter insert mode
-" so we can see all syntax hilighting when we have our insert cursor
-"set cursorline
-autocmd InsertEnter * highlight CursorLine guifg=NONE guibg=#111111 ctermfg=NONE ctermbg=NONE
-autocmd InsertLeave * highlight CursorLine guifg=NONE guibg=#330033 ctermfg=NONE ctermbg=darkred
-
-:highlight CursorLine   cterm=NONE ctermbg=darkred ctermfg=NONE guibg=#330033 guifg=NONE
-:highlight CursorColumn cterm=NONE ctermbg=darkred ctermfg=NONE guibg=#330000 guifg=NONE
-:highlight Cursor	     cterm=NONE ctermbg=yellow  ctermfg=black guibg=yellow guifg=black
-
-:highlight Visual       term=reverse cterm=NONE ctermfg=black  ctermbg=lightgreen gui=NONE guifg=black       guibg=lightgreen
-
-" Show a cursor line but disable it when we enter insert mode
-" so we can see all syntax hilighting when we have our insert cursor
-"set cursorline
-
 " set window size
-"set lines=55
-"set columns=85 "so that, with 1000-9999 line files, it's 80 chars wide
+if has("gui_running")
+set lines=55
+set columns=85 "so that, with 1000-9999 line files, it's 80 chars wide
+else 
+	colorscheme ir_black
+endif 
 
 set scrolloff=2
 set wildmode=list:longest
@@ -70,7 +43,7 @@ set viminfo='100,f1
 "*************** VIM LATEX ************
 filetype plugin on
 filetype indent on
-set grepprg=grep\ -nH\ $*
+"set grepprg=grep\ -nH\ $*
 let g:tex_flavor='latex'
 let g:tex_isk='48-57,a-z,A-Z,192-255,:'
 "map <F2> <F9>
@@ -144,8 +117,8 @@ function! StripTrailingWhitespace()
 endfunction
 
 "source ~/.vim/custom_mswin.vim
-" FIX <F9> on MBP 
-autocmd FileType tex imap <buffer> <M-TAB> <Plug>Tex_Completion
+
+
 
 " Only do this part when compiled with support for autocommands.
 if has("autocmd")
@@ -179,10 +152,6 @@ if has("autocmd")
     autocmd BufRead,BufNewFile *.m setlocal sw=4 ts=4
     autocmd BufRead,BufNewFile *.m setlocal expandtab
 
-		" Perl files
-    autocmd BufRead,BufNewFile *.pl setlocal sw=2 ts=2 
-    autocmd BufRead,BufNewFile *.pl setlocal expandtab
-
     "i files are SWIGs
     autocmd BufRead,BufNewFile *.i,*.swg set filetype=cpp
 
@@ -211,4 +180,28 @@ if has("autocmd")
   augroup END
 endif " has("autocmd")
 
-set clipboard=unnamed
+" Tex Mappings {{{
+   
+    " ,r: Forward-search with Skim    
+    map <leader>r :w<CR>:silent !/Applications/Skim.app/Contents/SharedSupport/displayline <C-r>=line('.')<CR> %<.pdf %<CR>
+   
+    " Shortcuts for bras and kets (Dirac notation)
+    imap <C-B> \langle
+    imap <C-K> \rangle
+    imap <C-v> qw<tab>
+    " defined in snippets
+
+    " Map \lz to write-compile-view
+    nmap <buffer><leader>lz :w<cr><leader>ll<leader>lv<cr>
+   
+    " When compiling the file, the cursor doesn't stay where it was, but
+    " jumps to the beginnig of line. Pressing `` will move the cursor back.
+    " Let's map \la to save, compile with \ll and return the cursor with ``:
+    nmap <buffer><leader>la :w<cr><leader>ll``
+
+    " Map Alt-Tab to Vim-Latex autocomplete cite/ref (former <F9>):
+    autocmd FileType tex imap <buffer> <M-TAB> <Plug>Tex_Completion
+
+"}}}
+
+
