@@ -1,0 +1,11 @@
+[user]
+	name = Evan Bollig
+	email = bollig@gmail.com
+[diff]
+	tool = vimdiff
+[core]
+	excludesfile = /Users/efb06/.gitignore_global
+[color]
+	status = auto
+	diff = auto
+	branch = auto
