@@ -14,8 +14,8 @@
 # Pedro Melo, <melo@simplicidade.org>
 
 # Set git autocompletion and PS1 integration
-if [ -f /usr/local/git/contrib/completion/git-completion.bash ]; then
-    . /usr/local/git/contrib/completion/git-completion.bash
+if [ -f	/usr/share/doc/git-1.7.1/contrib/completion/git-completion.bash ]; then
+	. /usr/share/doc/git-1.7.1/contrib/completion/git-completion.bash
 fi
 GIT_PS1_SHOWDIRTYSTATE=true
 GIT_PS1_SHOWUPSTREAM=verbose
